@@ -6,8 +6,8 @@ const http = require("http");    // http core modul
 const fs = require("fs");
 
 let user;
-fs.readFile("database/user.json", "utf-8", (err, data) => {
-  if(err) {
+fs.readFile("database/user.json", "utf8", (err, data) => {
+  if (err) {
     console.log("ERROR:", err);
   } else {
     user = JSON.parse(data);
@@ -30,14 +30,15 @@ app.set("view engine", "ejs");    // ejs traditional usulda fronend ni backend d
 
 
 // 4. Routing code
+app.get("/author", function(req, res) {                // author.ejs
+  res.render("author", {user: user});
+});
 
 app.get("/", function(req, res) {                // get client dan keladigan surovni qabul qilib oladi va javob qaytaradi
   res.render("harid");
 });
 
-app.get("/author", function(req, res) {                // author.ejs
-  res.render("author", {user: user});
-});
+
 
 
 const server = http.createServer(app);
