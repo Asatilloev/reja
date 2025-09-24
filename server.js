@@ -35,7 +35,7 @@ app.get("/author", function(req, res) {                // author.ejs
 });
 
 app.get("/", function(req, res) {                // get client dan keladigan surovni qabul qilib oladi va javob qaytaradi
-  res.render("harid");
+  res.render("reja");
 });
 
 
@@ -44,5 +44,5 @@ app.get("/", function(req, res) {                // get client dan keladigan sur
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function() {
-  console.log(`The server is running successfully on port: ${PORT}`);
+  console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
 });
