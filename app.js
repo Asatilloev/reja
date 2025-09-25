@@ -35,10 +35,32 @@ app.set("view engine", "ejs");    // ejs traditional usulda fronend ni backend d
 
 
 // 4. Routing code
-app.get("/author", function(req, res) {                // author.ejs
-  res.render("author", {user: user});
+app.post("/create-item", function(req, res) {
+  console.log('user entered /create-item');
+  console.log(req.body);
+  const new_reja = req.body.reja;
+  db.collection("palns").insertOne({reja: new_reja}, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.send("something went wrong ");
+    } else {
+      res.end("successfully added");
+    }
+  });
 });
 
-app.get("/", function(req, res) {                // get client dan keladigan surovni qabul qilib oladi va javob qaytaradi
-  res.render("reja");
+app.get("/", function(req, res) {
+  console.log('user entered /');
+  db.collection("palns")
+  .find()
+  .toArray((err, data) => {
+    if (err) {
+      console.log(err);
+      res.end("Something went wrong");
+    } else {
+      res.render("reja", {items: data});
+    }
+  });
 });
+
+module.exports = app;

@@ -1,4 +1,22 @@
+// Task - B =========================================
+
+function countDigits(a) {
+  let sanoq = 0;
+
+  a.split("").forEach((son) => {  // forEach str ning split ajratgan har bir elementini oladi va har birida kodni ishlatadi
+    if (!isNaN(Number(son))) { // isNaN - chpt dan
+      sanoq++;
+    }
+  });
+  return sanoq;
+}
+
+console.log(countDigits("d6g4hbn46c4n2c44h8g"));
+
+
+
 // Task - A =========================================
+/*
 function countLetter(harf, soz) {     // harf va so'zni parametr qilib qabul qiladigan funksiya tuzamiz
   return soz;
 }
@@ -15,6 +33,7 @@ for (let i = 0; i < a.length; i++) {   // harfni 0 dan boshlab sanaydi so'z uzun
 
 console.log("natija:", a);
 console.log('kiritilgan harfi soni:', count);
+*/
 
 // NodeJS event loop va Callback functionlarni o'rganamiz  ===========================================================================================
 
