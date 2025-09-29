@@ -1,5 +1,42 @@
-// Task - B =========================================
+// Task - c =========================================
+// utgan accaunt yaratish mavzusiga uxshash misol
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
 
+   t() { let d=new Date();
+    return (`${d.getHours()}:${d.getMinutes()}`);
+  }
+
+  qoldiq() {
+    console.log(`Hozir ${this.t()}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola bor`);
+  }
+
+  sotish(n,s) {
+    this[n]-=s;
+    console.log(`${this.t()}da ${s}ta ${n} sotildi`);
+  }
+
+  qabul(n,s) {
+    this[n]+=s;
+    console.log(`${this.t()}da ${s}ta ${n} qabul qilindi`);
+  }
+}
+
+const shop = new Shop(4,5,2);
+
+shop.qoldiq();
+shop.sotish("non",3);
+shop.qabul("cola",4);
+shop.qoldiq();
+
+
+
+// Task - B =========================================
+/*
 function countDigits(a) {
   let sanoq = 0;
 
@@ -12,7 +49,7 @@ function countDigits(a) {
 }
 
 console.log(countDigits("d6g4hbn46c4n2c44h8g"));
-
+*/
 
 
 // Task - A =========================================
