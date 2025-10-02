@@ -1,5 +1,19 @@
+// Task - D =========================================
+function taqqoslash(str1, str2) {
+  const a = str1.split('').sort().join();
+  const b = str2.split('').sort().join();
+  if (a !== b) {
+    console.log("xatolik bor!");
+  }
+  return a === b;
+};
+const natija = taqqoslash("dars", "sard")
+console.log(natija);
+
+
 // Task - c =========================================
 // utgan accaunt yaratish mavzusiga uxshash misol
+/*
 class Shop {
   constructor(non, lagmon, cola) {
     this.non = non;
@@ -16,7 +30,9 @@ class Shop {
   }
 
   sotish(n,s) {
-    this[n]-=s;
+    this.non-=s;
+    this.lagmon-=s;
+    this.cola-=s;
     console.log(`${this.t()}da ${s}ta ${n} sotildi`);
   }
 
@@ -32,7 +48,7 @@ shop.qoldiq();
 shop.sotish("non",3);
 shop.qabul("cola",4);
 shop.qoldiq();
-
+*/
 
 
 // Task - B =========================================
