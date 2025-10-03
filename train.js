@@ -1,4 +1,14 @@
+// Task - E =========================================
+function teskari(str) {
+  const a = str.split('').reverse().join('');
+  return a;
+};
+const natija = teskari("dars");
+console.log(natija);
+
+
 // Task - D =========================================
+/*
 function taqqoslash(str1, str2) {
   const a = str1.split('').sort().join();
   const b = str2.split('').sort().join();
@@ -9,7 +19,7 @@ function taqqoslash(str1, str2) {
 };
 const natija = taqqoslash("dars", "sard")
 console.log(natija);
-
+*/
 
 // Task - c =========================================
 // utgan accaunt yaratish mavzusiga uxshash misol
