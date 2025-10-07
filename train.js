@@ -1,11 +1,29 @@
+// Task - F =========================================
+
+function findDoublers(str) {
+  for (let a = 0; a < str.length; a++) {
+    for (let b = a + 1; b < str.length; b++) {
+      if (str[a] === str[b]) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+console.log(findDoublers("mehmonxona"));
+console.log(findDoublers("dunyo"));
+
+
 // Task - E =========================================
+/*
 function teskari(str) {
   const a = str.split('').reverse().join('');
   return a;
 };
 const natija = teskari("dars");
 console.log(natija);
-
+*/
 
 // Task - D =========================================
 /*
